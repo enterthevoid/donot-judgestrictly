@@ -14,9 +14,9 @@ const LinkStyle = {
 const AppBarMain = () => (
   <AppBar>
     <div style={LinkStyle}>
-      <Link to="/login">Login</Link>
-      <Link to="/gamesscreen">GamesScreen</Link>
-      <Link to="/spoterscreen">SpotterScreen</Link>
+      <Link className="Link" to="/login">Login</Link>
+      <Link className="Link" to="/gamesscreen">GamesScreen</Link>
+      <Link className="Link" to="/spoterscreen">SpotterScreen</Link>
     </div>
   </AppBar>
 );

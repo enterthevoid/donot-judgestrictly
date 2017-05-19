@@ -15,10 +15,17 @@ const buttonStyle = {
   margin: "20"
 };
 
+const rootStyle = {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  flexDirection: "column"
+};
+
 export default class LoginScreen extends Component {
   render() {
     return (
-      <div className="container">
+      <div className="container" style={rootStyle}>
         <img id="logo" src={Logo} style={logoStyle} />
         <br />
         <TextField hintText="Username Field" floatingLabelText="Username" />

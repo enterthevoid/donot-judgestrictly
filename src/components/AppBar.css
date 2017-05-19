@@ -1,0 +1,11 @@
+.Link{
+    text-decoration: none;
+    cursor: pointer;
+    color: "white";
+    font-family: 'Arial Black';
+    letter-spacing: 1px;
+    color: "white";
+}
+.Link:visited {
+    color: #FFCF00;
+}

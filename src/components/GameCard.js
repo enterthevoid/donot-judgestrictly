@@ -4,10 +4,13 @@ import PropTypes from "prop-types";
 import { Card, CardTitle } from "material-ui/Card";
 import RaisedButton from "material-ui/RaisedButton";
 import { getEmblem } from "../utils/GetLogo";
-import { Link } from "react-router-dom";
 
 const titleStyle = {
-  padding: 0
+  padding: 0,
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  flexDirection: "column"
 };
 const styles = {
   teams: {
@@ -49,14 +52,12 @@ class GameCard extends Component {
           </div>
         </div>
         <CardTitle title={title} subtitle={status} style={titleStyle} />
-        <Link to="/spoterscreen">
-          <RaisedButton
-            href="#"
-            label="MONITOR"
-            backgroundColor="#FFCF00"
-            fullWidth={true}
-          />
-        </Link>
+        <RaisedButton
+          href="#"
+          label="MONITOR"
+          backgroundColor="#FFCF00"
+          fullWidth={true}
+        />
       </Card>
     );
   }
