@@ -1,9 +1,5 @@
-import GameScreen from "./GameScreen";
+import GamesScreen from "./GamesScreen";
 import LoginScreen from "./LoginScreen";
 import SpotterScreen from "./SpotterScreen";
 
-export default {
-  GameScreen,
-  LoginScreen,
-  SpotterScreen
-};
+export { GamesScreen, LoginScreen, SpotterScreen };
