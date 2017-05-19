@@ -6,7 +6,7 @@ import Logo from "../Logo.png";
 import { Link } from "react-router-dom";
 
 const logoStyle = {
-  margin: "70px 0 20px 0",
+  margin: "90px 0 20px 0",
   width: "300"
 };
 
@@ -19,7 +19,8 @@ const rootStyle = {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  flexDirection: "column"
+  flexDirection: "column",
+  alignContent: "center"
 };
 
 export default class LoginScreen extends Component {
