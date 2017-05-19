@@ -2,6 +2,6 @@ import React, { Component } from "react";
 
 export default class SpotterScreen extends Component {
   render() {
-    return <h1>SpotterScreen</h1>;
+    return <h1>Привет!!</h1>;
   }
 }

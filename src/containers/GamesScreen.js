@@ -2,6 +2,8 @@ import React, { Component } from "react";
 
 import GameCard from "../components/GameCard";
 import AppBar from "../components/AppBar";
+import games from "../assets/games";
+import PropTypes from "prop-types";
 
 const styles = {
   root: {
@@ -13,11 +15,16 @@ const styles = {
 };
 
 class GamesScreen extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      open: true
-    };
+  static propTypes = {
+    quarter: PropTypes.number,
+    panding: PropTypes.number,
+    status: PropTypes.string,
+    teamA: PropTypes.string.isRequired,
+    teamB: PropTypes.string.isRequired
+  };
+
+  constructor(props, context) {
+    super(props, context);
   }
 
   render() {
@@ -25,6 +32,13 @@ class GamesScreen extends Component {
       <div className="container">
         <AppBar />
         <div style={styles.root}>
+          {games.map(game => (
+            <GameCard
+              teamA={game.home_team_alias}
+              teamB={game.away_team_alias}
+              status={game.status}
+            />
+          ))}
           <GameCard
             title="Headline Example"
             status="Caption Example"
