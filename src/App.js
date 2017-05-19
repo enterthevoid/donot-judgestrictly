@@ -2,9 +2,7 @@ import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import LoginScreen from "./containers/LoginScreen";
-import GamesScreen from "./containers/GamesScreen";
-import SpotterScreen from "./containers/SpotterScreen";
+import { GamesScreen, SpotterScreen, LoginScreen } from "./containers";
 
 class App extends Component {
   render() {
