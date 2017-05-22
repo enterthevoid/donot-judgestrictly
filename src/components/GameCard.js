@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import "./GameCard.css";
 
 import { CardTitle } from "material-ui/Card";
 import RaisedButton from "material-ui/RaisedButton";
@@ -69,7 +70,7 @@ class GameCard extends Component {
     const { name, status, teamA, teamB } = this.props;
     return (
       <div>
-        <Paper style={styles.PaperStyle} zDepth="5">
+        <Paper style={styles.PaperStyle} zDepth="1">
           <div style={styles.teams}>
             <div style={styles.teamA}>
               <Avatar style={styles.AvatarStyles} src={getEmblem(teamA)} />

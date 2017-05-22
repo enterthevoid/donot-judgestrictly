@@ -1,0 +1,55 @@
+teams: {
+    display: "flex",
+    justifyContent: "center",
+    height: 130,
+    backgroundColor: "#F8F8F8"
+  },
+  teamA: {
+    flex: 1,
+    display: "flex",
+    justifyContent: "center"
+  },
+  teamB: {
+    flex: 1,
+    display: "flex",
+    justifyContent: "center"
+  },
+  titleStyle: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    alignContent: "center",
+    flexDirection: "column",
+    backgroundColor: "#F8F8F8",
+    height: 45,
+    fontFamily: "Impact",
+    fontSize: 20,
+    padding: 3
+  },
+  AtStyle: {
+    alignItems: "center",
+    display: "flex",
+    fontFamily: "Impact",
+    fontSize: 35
+  },
+  AvatarStyles: {
+    width: 120,
+    height: 120,
+    marginTop: 5,
+    backgroundColor: "#F8F8F8"
+  },
+  PaperStyle: {
+    height: 190,
+    width: 340,
+    margin: 40,
+    zDepth: 5
+  }
+};
+
+class GameCard extends Component {
+  static propTypes = {
+    name: PropTypes.string,
+    status: PropTypes.string,
+    teamA: PropTypes.string,
+    teamB: PropTypes.string
+  };
