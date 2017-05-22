@@ -6,8 +6,8 @@ import Logo from "../Logo.png";
 import { Link } from "react-router-dom";
 
 const logoStyle = {
-  margin: "90px 0 20px 0",
-  width: "300"
+  margin: "70px 0 20px 0",
+  width: "250"
 };
 
 const buttonStyle = {

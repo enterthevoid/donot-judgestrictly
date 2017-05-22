@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-import { Card, CardTitle } from "material-ui/Card";
+import { CardTitle } from "material-ui/Card";
 import RaisedButton from "material-ui/RaisedButton";
 import { getEmblem } from "../utils/GetLogo";
 import { Link } from "react-router-dom";

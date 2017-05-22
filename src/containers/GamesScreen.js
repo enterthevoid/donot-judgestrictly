@@ -24,10 +24,6 @@ class GamesScreen extends Component {
     name: PropTypes.string
   };
 
-  constructor(props, context) {
-    super(props, context);
-  }
-
   render() {
     return (
       <div className="container">

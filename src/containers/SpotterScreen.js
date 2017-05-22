@@ -1,29 +1,37 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
+import ReactPlayer from "react-player";
 
-import Drawer from "material-ui/Drawer";
-import MenuItem from "material-ui/MenuItem";
-import RaisedButton from "material-ui/RaisedButton";
+import AppDrawer from "../components/AppDrawer";
+import AppBar from "../components/AppBar";
 
-import DrawerItem from "./DrawerItem.js";
+const rootstyles = {
+  display: "flex",
+  flexDirection: "row",
+  ustifyContent: "flex-start",
+  margin: 5
+};
+const AppDrawerStyles = {
+  width: 260
+};
 
-import games from "../assets/games";
-
-export default class AppDrawer extends Component {
-  static propTypes = {
-    title: PropTypes.string,
-    status: PropTypes.string,
-    teamA: PropTypes.string,
-    teamB: PropTypes.string
-  };
-
-  handleToggle = () => this.setState({ open: !this.state.open });
-
+export default class SpotterScreen extends Component {
   render() {
     return (
-      <div>
-        <RaisedButton label="Toggle Drawer" onTouchTap={this.handleToggle} />
-
+      <div className="container">
+        <div>
+          <AppBar />
+        </div>
+        <div style={rootstyles}>
+          <div style={AppDrawerStyles}>
+            <AppDrawer />
+          </div>
+          <div>
+            <ReactPlayer
+              url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
+              playing
+            />
+          </div>
+        </div>
       </div>
     );
   }
