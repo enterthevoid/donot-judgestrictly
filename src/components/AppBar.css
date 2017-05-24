@@ -1,18 +1,19 @@
-.LinkStyle{
-  display: "flex";
-  align-items: "center";
-  justify-content: "space-between";
+
+.LinkStyle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
   height: 68px;
   width: 350px;
 }
 .Link{
     text-decoration: none;
     cursor: pointer;
-    color: "white";
-    font-family: 'tahoma';
+    font-family: 'Roboto';
     letter-spacing: 1px;
-    color: "white";
+    font-size: 18px;
 }
 .Link:visited {
-    color: #FFCF00;
+    color: white;
 }

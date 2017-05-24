@@ -1,0 +1,14 @@
+.RootStyle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.LogoStyle {
+  margin: 70px 0 12px 0;
+  width: 200px;
+}
+.ButtonStyle {
+  width: 255px;
+  margin: 24px;
+}

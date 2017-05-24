@@ -1,0 +1,53 @@
+.RightRoot {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+}
+.TextFieldRoot {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto';
+    margin: 5px;
+    height: 150px;
+    width: auto;
+    border: 1px;
+}
+.TextFieldOne {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 50px;
+
+}
+.Description{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 50px;
+    margin-top: 15px;
+}
+.Text {
+    font-size: 16px;
+    margin: 20px;
+    font-family: 'Roboto';
+    width: 100px;
+}
+.Button {
+    margin: 10px;
+}
+.RadioButtonRoot{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+
+}
+.RadioButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-family: 'Roboto';
+    font-size: 15px;
+    align-content: center;
+    width: 200px;
+}

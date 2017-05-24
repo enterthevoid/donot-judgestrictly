@@ -64,5 +64,7 @@ export const getEmblem = team => {
       return require("../logos/ten.png");
     case "was":
       return require("../logos/was.png");
+    default:
+      return require("../logos/was.png");
   }
 };

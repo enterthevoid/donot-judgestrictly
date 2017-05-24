@@ -3,17 +3,10 @@ import AppBar from "material-ui/AppBar";
 import { Link } from "react-router-dom";
 import "./AppBar.css";
 
-const LinkStyle = {
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "space-between",
-  height: 68,
-  width: 350
-};
 
 const AppBarMain = () => (
   <AppBar>
-    <div style={LinkStyle}>
+    <div className="LinkStyle">
       <Link className="Link" to="/login">Login</Link>
       <Link className="Link" to="/gamesscreen">Games</Link>
       <Link className="Link" to="/spoterscreen">Spotter</Link>

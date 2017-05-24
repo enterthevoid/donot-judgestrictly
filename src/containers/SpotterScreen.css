@@ -1,0 +1,86 @@
+.Root{
+    display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.Conteiner {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 5;
+  width: auto;
+}
+.LeftSide {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  min-width: 200px;
+  margin: 5px;
+}
+.Player {
+  display: flex;
+  width: 640px;
+  height: 400px;
+  background: green;
+  margin-right: 0px;
+
+}
+.StartEnd{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: auto;
+}
+.StartEndPaper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto";
+  width: 330px;
+  height: 60px;
+  margin: 0px;
+}
+
+
+.RightSide {
+  display: flex;
+  flex-direction: column;
+  justify-content: 	flex-start;
+  margin: 5px;
+  min-width: 200px;
+  max-width: 630px;
+}
+.Pending {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  height: 55px;
+  font-family: "Roboto";
+  width: auto;
+}
+.Tab {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  margin: 10;
+}
+.Sit{
+  font-size: 24;
+    font-family: "Roboto";
+    margin: 10px 0 0 0;
+}
+.headline {
+    font-size: 24;
+    margin: 10px;
+    font-family: "Roboto";
+}
+.ButtonsLeft{
+  display: flex;
+  justify-content: space-around;;
+  align-items: center;
+  height: 40px;
+  margin-top: 5px;
+}
