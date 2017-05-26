@@ -1,8 +1,7 @@
 import React from "react";
 import AppBar from "material-ui/AppBar";
 import { Link } from "react-router-dom";
-import "./AppBar.css";
-
+import "./styles/AppBar.css";
 
 const AppBarMain = () => (
   <AppBar>

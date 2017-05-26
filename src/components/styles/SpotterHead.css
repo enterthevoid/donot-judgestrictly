@@ -1,0 +1,34 @@
+.Head{
+  height: 155px;
+  width: 100%;
+  background-color: #212121;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.HeadItem{
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-start;
+}
+.HeadTitle{
+  font-family: "Roboto";
+  font-size: 30px;
+  font-weight: 900;
+  color: #F4F4F4;
+  margin-top: 70px;
+  margin-left:  45px;
+  margin-bottom: 0px;
+}
+.HeadTime{
+  font-family: "Roboto";
+  font-size: 20px;
+  font-weight: 200;
+  color:#F4F4F4;
+  margin-top: 5px;
+  margin-left: 45px;
+  margin-bottom: 20px;
+}

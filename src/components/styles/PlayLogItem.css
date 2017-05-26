@@ -1,0 +1,52 @@
+.MenuItem{
+  padding: 0px;
+}
+.PlayLogItem{
+ height: 50px;
+ color: black;
+ margin-bottom: 2px;
+}
+.PlayLogItemActive{
+    background-color: white;
+    color: black;
+    width: 145px;
+    height: 50px;
+    cursor: pointer;
+}
+.PlayLogItemNull{
+    background-color: black;
+    color: white;
+    width: 145px;
+    height: 50px;
+    cursor: pointer;
+}
+.StatButtYellow{
+  width: 10px;
+  height: 48px;
+  background: #FFD200;
+  position: absolute;
+  right: 125px; 
+  height: 50px;
+}
+.StatButtGrey{
+  width: 10px;
+  height: 48px;
+  background: #4B4B4B;
+  position: absolute;
+  right: 125px; 
+  height: 50px;
+}
+.StatItem{
+  font-family: "Roboto";
+  font-size: 13px;
+  font-weight: 900;
+  margin: 0 0 0 20px;
+  line-height: 50px;
+}
+.MenuItemBox{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  border: 0px solid;
+  position: relative;
+}

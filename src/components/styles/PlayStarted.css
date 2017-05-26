@@ -1,0 +1,24 @@
+.PlayStarted{
+    display: flex;
+    flex-direction: row;
+}
+.Title{
+    font-family: "Roboto";
+    font-size: 12px;
+    font-weight: 600;
+    margin: 6px 0 7px 10px;
+}
+.PlayStarted{
+    height:55px;
+    width:280px;
+    background-color: #F9F9F9;
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.TimeProp{
+     font-family: "Roboto";
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0px 0 10px 10px;
+}

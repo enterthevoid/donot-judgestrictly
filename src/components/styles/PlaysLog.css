@@ -1,0 +1,47 @@
+.ContainerLog{
+  display: flex;
+   flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+}
+.PlayLog {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #191919;
+}
+.LogHead{
+  height: 100px;
+  background-color: #FFD800;
+  margin-top: -20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.LogHeadPending{
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 900;
+  margin-top: 50px;
+}
+.LogHeadNumber{
+  font-family: "Roboto";
+  font-size: 24px;
+  font-weight: 900;
+  margin-top: -5px;
+}
+.StatTitle{
+  font-family: "Roboto";
+  font-size: 13px;
+  font-weight: 900;
+  margin: 13px 0 15px 13px;
+  color: white;
+}
+.LogStats{
+ width: 135px; 
+ background-color: #191919;
+ height: 100%;
+ display: flex;
+ flex-direction: column;
+}

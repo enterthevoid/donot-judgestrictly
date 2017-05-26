@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./GameCard.css";
+import "./styles/GameCard.css";
 
 import RaisedButton from "material-ui/RaisedButton";
 import { getEmblem } from "../utils/GetLogo";

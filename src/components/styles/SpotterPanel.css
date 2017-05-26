@@ -1,0 +1,59 @@
+.SpotterContainer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    position: absolute; 
+    top: 81px;
+    right: 150px;
+}
+.SpotterRoot {
+    height: 580px;
+    width: 475px;
+    display: flex;
+    flex-direction: column;
+}
+.TopLine {
+    height: 10px;
+    width: 100%;
+    background-color: #FFD500;
+}
+.YardsnTime {
+    display: flex;
+    flex-direction: row;
+}
+.RadioBox {
+    display: flex;
+    flex-direction: row;
+}
+.Input {
+    height: 110px;
+    width: 420px;
+    margin-top:10px;
+    margin-left: 25px;
+    background-color: #F9F9F9;
+}
+.InputTitle{
+    font-family: "Roboto";
+    font-size: 12px;
+    font-weight: 900;
+    margin-bottom: 8px;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+textarea {
+    font-family: "Roboto";
+    font-size: 20px;
+    font-weight: 300;
+    height: 90px;
+    width: 415px;
+    background-color: #F9F9F9;
+    border: 0px;
+}
+.FormButtons{
+    display: flex;
+    flex-direction: row;
+    margin-top: 12px;
+}
+
+

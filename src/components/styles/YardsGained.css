@@ -1,0 +1,19 @@
+.YardsGained{
+    height:55px;
+    width:130px;
+    background-color: #F9F9F9;
+    margin-left: 25px;
+    display:flex;
+    flex-direction: column;
+}
+.Title{
+    font-family: "Roboto";
+    font-size: 12px;
+    margin-top: 14px;
+}
+.YardsProp{
+    font-family: "Roboto";
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0px 0 10px 10px;
+}

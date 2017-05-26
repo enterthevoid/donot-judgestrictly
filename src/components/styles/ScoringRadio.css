@@ -1,0 +1,45 @@
+.Scoring {
+    height: 240px;
+    width: 135px;
+    background-color: #F9F9F9;
+    margin-left: 10px;
+    margin-top: 10px;
+    display:flex;
+    flex-direction: column;
+    align-items:flex-start;
+    align-content: center;
+}
+.TitleRadio {
+    font-family: "Roboto";
+    font-size: 11px;
+    font-weight: 900;
+    margin-left: 10px;
+    margin-top: 6px;
+    margin-bottom: 0px;
+}
+.ValueRadio {
+    font-family: "Roboto";
+    font-size: 12px;
+    margin:2px; 
+}
+.Radio {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px; 
+}
+.RadioName{
+    margin:3px 0 0 4px;
+    font-family: "Roboto";
+    font-size: 12px;
+    line-height: 17px;
+    padding-left: 17px
+}
+label{
+    cursor: pointer;
+}
+input {
+    float: left;
+}
+p{
+    padding-left: 17px;
+}

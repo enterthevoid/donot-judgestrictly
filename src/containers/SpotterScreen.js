@@ -1,60 +1,72 @@
 import React, { Component } from "react";
 import "./SpotterScreen.css";
+import PlaysLog from "../components/PlaysLog";
+import SpotterPanel from "../components/SpotterPanel";
+import SpotterHead from "../components/SpotterHead";
 
-import RaisedButton from "material-ui/RaisedButton";
+import Toggle from "material-ui/Toggle";
 import Paper from "material-ui/Paper";
-import { Tabs, Tab } from "material-ui/Tabs";
-import TextField from "material-ui/TextField";
 
-import AppBar from "../components/AppBar";
-import PlayDescription from "../components/PlayDescription";
+const g_Plays = [
+  { key: "zalu[a]", phase: "QUARTER 1", clock: "10:55", processed: false },
+  { key: "zalu[a]2", phase: "QUARTER 2", clock: "11:55", processed: false },
+  { key: "zalu[a]3", phase: "QUARTER 3", clock: "12:55", processed: true },
+  { key: "zalu[a]4", phase: "QUARTER 4", clock: "13:55", processed: true },
+  { key: "zalu[a]5", phase: "PREGAME", clock: "14:55", processed: true },
+  { key: "zalu[a]6", phase: "HALFTIME", clock: "15:55", processed: true },
+  { key: "zalu[a]7", phase: "OVERTIME", clock: "16:55", processed: true },
+  { key: "zalu[a]8", phase: "OVE", clock: "16:55", processed: true }
+];
+
+const styles = {
+  thumbOff: {
+    backgroundColor: "#F2F2F2"
+  },
+  trackOff: {
+    backgroundColor: "#373737"
+  },
+  thumbSwitched: {
+    backgroundColor: "#F2F2F2"
+  },
+  trackSwitched: {
+    backgroundColor: "#FFCF00"
+  },
+  labelStyle: {
+    color: "#F2F2F2"
+  }
+};
 
 export default class SpotterScreen extends Component {
   render() {
     return (
-      <div className="Container">
-        <AppBar />
-        <div className="Root">
-          <div className="LeftSide">
-            <div className="Player" />
-            <Paper className="ButtonsLeft">
-              <RaisedButton label="Save Play" primary={true} />
-              <RaisedButton label="Reset" primary={true} />
-              <RaisedButton label="Skip Play" />
-            </Paper>
-          </div>
-          <div className="RightSide">
-            <Paper className="Pending">
-              <h3 className="headline"> 700 Plays Pending</h3>
-              <RaisedButton
-                label="Recall Last Play"
-                backgroundColor={"#FFCF00"}
-                margin="3"
+      <div className="ContainerSpotter">
+
+        <SpotterHead />
+        <div className="BackGrount">
+          <div className="PlayerField">
+            <div>
+              <Paper
+                className="Player"
+                style={{ backgroundColor: "#373737" }}
               />
-            </Paper>
-            <div className="StartEnd">
-              <Paper className="StartEndPaper">
-                <h3 className="Sit">Start Situation</h3>
-                <TextField style={{ height: "30", width: "130" }} />
-              </Paper>
-              <Paper className="StartEndPaper">
-                <h3 className="Sit">End Situation</h3>
-                <TextField style={{ height: "30", width: "130" }} />
-              </Paper>
             </div>
-            <Paper>
-              <Tabs className="Tab">
-                <Tab label="Current Event">
-                  <PlayDescription />
-                </Tab>
-                <Tab label="Pending Events(25)">
-                  <h2 className="headline">Tab Two</h2>
-                  <p>
-                    This is another example tab.
-                  </p>
-                </Tab>
-              </Tabs>
-            </Paper>
+            <div className="Toggle">
+              <Toggle
+                label="Advertisement"
+                style={styles}
+                thumbStyle={styles.thumbOff}
+                trackStyle={styles.trackOff}
+                thumbSwitchedStyle={styles.thumbSwitched}
+                trackSwitchedStyle={styles.trackSwitched}
+                labelStyle={{ color: "#F2F2F2" }}
+              />
+            </div>
+          </div>
+          <div>
+            <PlaysLog plays={g_Plays} />
+          </div>
+          <div>
+            <SpotterPanel />
           </div>
         </div>
       </div>
