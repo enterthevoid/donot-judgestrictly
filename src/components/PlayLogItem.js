@@ -1,7 +1,5 @@
-import React, { Component, PropTypes } from "react";
+import React, { PropTypes } from "react";
 import "./styles/PlayLogItem.css";
-
-import MenuItem from "material-ui/MenuItem";
 
 function shortPhase(phase) {
   switch (phase) {

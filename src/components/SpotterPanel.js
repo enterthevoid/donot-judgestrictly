@@ -35,16 +35,21 @@ export default class SpotterPanel extends Component {
           </div>
           <div className="Input">
             <p className="InputTitle">DESCRIPTION :</p>
-            <textarea />
+            <form onSubmit={this.handleSubmit}>
+              <textarea />
+            </form>
           </div>
           <div className="FormButtons">
-            <RaisedButton label="Reset" style={style} />
+            <RaisedButton label="Reset" style={style} type="reset" />
             <RaisedButton label="Skip" style={style} />
-            <RaisedButton
-              label="Save Play"
-              style={{ marginLeft: 49, height: 52, width: 145 }}
-              backgroundColor="#FFCF00"
-            />
+            <form onSubmit={this.handleFormSubmit}>
+              <RaisedButton
+                type="submit"
+                label="Save Play"
+                style={{ marginLeft: 49, height: 52, width: 145 }}
+                backgroundColor="#FFCF00"
+              />
+            </form>
           </div>
         </Paper>
       </div>

@@ -15,64 +15,66 @@ export default class TurnoverRadio extends Component {
     return (
       <div className="Turnover">
         <p className="TitleRadio">TURNOVER :</p>
-        <div className="Radio">
-          <div className="ValueRadio">
-            <label>
-              <input
-                type="radio"
-                value="NONE"
-                name="Turnover"
-                checked={this.state.turnover === "NONE"}
-                onChange={e => this.handleOptionChange(e)}
-              />
-              <p className="RadioName">
-                None
-              </p>
-            </label>
+        <form>
+          <div className="Radio">
+            <div className="ValueRadio">
+              <label>
+                <input
+                  type="radio"
+                  value="NONE"
+                  name="Turnover"
+                  checked={this.state.turnover === "NONE"}
+                  onChange={e => this.handleOptionChange(e)}
+                />
+                <p className="RadioName">
+                  None
+                </p>
+              </label>
+            </div>
+            <div className="ValueRadio">
+              <label>
+                <input
+                  type="radio"
+                  value="FUMBLE"
+                  name="Turnover"
+                  checked={this.state.turnover === "FUMBLE"}
+                  onChange={e => this.handleOptionChange(e)}
+                />
+                <p className="RadioName">
+                  Fumble Lost
+                </p>
+              </label>
+            </div>
+            <div className="ValueRadio">
+              <label>
+                <input
+                  type="radio"
+                  value="INTERCEPTION"
+                  name="Turnover"
+                  checked={this.state.turnover === "INTERCEPTION"}
+                  onChange={e => this.handleOptionChange(e)}
+                />
+                <p className="RadioName">
+                  Interception
+                </p>
+              </label>
+            </div>
+            <div className="ValueRadio">
+              <label>
+                <input
+                  type="radio"
+                  value="ON_DOWNS"
+                  name="Turnover"
+                  checked={this.state.turnover === "ON_DOWNS"}
+                  onChange={e => this.handleOptionChange(e)}
+                />
+                <p className="RadioName">
+                  Turnover Downs
+                </p>
+              </label>
+            </div>
           </div>
-          <div className="ValueRadio">
-            <label>
-              <input
-                type="radio"
-                value="FUMBLE"
-                name="Turnover"
-                checked={this.state.turnover === "FUMBLE"}
-                onChange={e => this.handleOptionChange(e)}
-              />
-              <p className="RadioName">
-                Fumble Lost
-              </p>
-            </label>
-          </div>
-          <div className="ValueRadio">
-            <label>
-              <input
-                type="radio"
-                value="INTERCEPTION"
-                name="Turnover"
-                checked={this.state.turnover === "INTERCEPTION"}
-                onChange={e => this.handleOptionChange(e)}
-              />
-              <p className="RadioName">
-                Interception
-              </p>
-            </label>
-          </div>
-          <div className="ValueRadio">
-            <label>
-              <input
-                type="radio"
-                value="ON_DOWNS"
-                name="Turnover"
-                checked={this.state.turnover === "ON_DOWNS"}
-                onChange={e => this.handleOptionChange(e)}
-              />
-              <p className="RadioName">
-                Turnover Downs
-              </p>
-            </label>
-          </div>
-        </div>
+        </form>
       </div>
     );
   }

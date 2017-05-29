@@ -63,7 +63,12 @@ export default class SpotterScreen extends Component {
             </div>
           </div>
           <div>
-            <PlaysLog plays={g_Plays} />
+            <PlaysLog
+              onChange={play => {
+                this.handlePlayChange(play);
+              }}
+              plays={g_Plays}
+            />
           </div>
           <div>
             <SpotterPanel />

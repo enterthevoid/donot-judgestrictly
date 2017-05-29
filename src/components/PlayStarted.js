@@ -9,8 +9,8 @@ export default class PlayStarted extends Component {
       <div className="PlayStartedContainer">
         <div className="PlayStarted">
           <div className="PlayDiv">
-            <p className="Title">PLAY STARTED :</p>
-            <p className="TimeProp">14:16:47</p>
+            <h3 className="Title">PLAY STARTED :</h3>
+            <h3 className="TimeProp">14:16:47</h3>
           </div>
           <RaisedButton
             label="NOW"

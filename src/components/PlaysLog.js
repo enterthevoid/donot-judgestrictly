@@ -27,8 +27,8 @@ export default class SpotterScreen extends Component {
             docked={true}
           >
             <div className="LogHead">
-              <p className="LogHeadPending">PENDING:</p>
-              <p className="LogHeadNumber">2</p>
+              <h1 className="LogHeadPending">PENDING:</h1>
+              <h1 className="LogHeadNumber">2</h1>
             </div>
             <div className="LogStats">
               <p className="StatTitle">PLAYS LOG</p>

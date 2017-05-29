@@ -6,8 +6,8 @@ export default class YardsGained extends Component {
     return (
       <div className="YardsContainer">
         <div className="YardsGained">
-          <p className="Title">YARDS GAINED :</p>
-          <p className="YardsProp">24</p>
+          <h3 className="Title">YARDS GAINED :</h3>
+          <h3 className="YardsProp">24</h3>
         </div>
       </div>
     );

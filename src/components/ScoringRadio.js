@@ -8,124 +8,125 @@ export default class ScoringRadio extends Component {
   }
   handleOptionChange(event) {
     this.setState({
-      scor: event.target.value
+      score: event.target.value
     });
   }
   render() {
     return (
       <div className="Scoring">
         <p className="TitleRadio">SCORING :</p>
-        <div className="Radio">
-          <div className="ValueRadio">
-            <label>
-              <input
-                type="radio"
-                value="NONE"
-                name="scoring"
-                checked={this.state.scor === "NONE"}
-                onChange={e => this.handleOptionChange(e)}
-              />
-              <p className="RadioName">None</p>
-            </label>
+        <form>
+          <div className="Radio">
+            <div className="ValueRadio">
+              <label>
+                <input
+                  type="radio"
+                  value="NONE"
+                  name="scoring"
+                  checked={this.state.score === "NONE"}
+                  onChange={e => this.handleOptionChange(e)}
+                />
+                <p className="RadioName">None</p>
+              </label>
+            </div>
+            <div className="ValueRadio">
+              <label>
+                <input
+                  type="radio"
+                  value="OFF_TOUCHDOWN"
+                  name="scoring"
+                  checked={this.state.score === "OFF_TOUCHDOWN"}
+                  onChange={e => this.handleOptionChange(e)}
+                />
+                <p className="RadioName">
+                  Offensive TD
+                </p>
+              </label>
+            </div>
+            <div className="ValueRadio">
+              <label>
+                <input
+                  type="radio"
+                  value="DEF_TOUCHDOWN"
+                  name="scoring"
+                  checked={this.state.score === "DEF_TOUCHDOWN"}
+                  onChange={e => this.handleOptionChange(e)}
+                />
+                <p className="RadioName">
+                  Defensive TD
+                </p>
+              </label>
+            </div>
+            <div className="ValueRadio">
+              <label>
+                <input
+                  type="radio"
+                  value="ST_TOUCHDOWN"
+                  name="scoring"
+                  checked={this.state.score === "ST_TOUCHDOWN"}
+                  onChange={e => this.handleOptionChange(e)}
+                />
+                <p className="RadioName">
+                  Sp. Teams TD
+                </p>
+              </label>
+            </div>
+            <div className="ValueRadio">
+              <label>
+                <input
+                  type="radio"
+                  value="FIELDGOAL"
+                  name="scoring"
+                  checked={this.state.score === "FIELDGOAL"}
+                  onChange={e => this.handleOptionChange(e)}
+                />
+                <p className="RadioName">
+                  Field Goal Made
+                </p>
+              </label>
+            </div>
+            <div className="ValueRadio">
+              <label>
+                <input
+                  type="radio"
+                  value="EXTRA_POINT"
+                  name="scoring"
+                  checked={this.state.score === "EXTRA_POINT"}
+                  onChange={e => this.handleOptionChange(e)}
+                />
+                <p className="RadioName">
+                  Extra Point Made
+                </p>
+              </label>
+            </div>
+            <div className="ValueRadio">
+              <label>
+                <input
+                  type="radio"
+                  value="TWOPT_CONVERSION"
+                  name="scoring"
+                  checked={this.state.score === "TWOPT_CONVERSION"}
+                  onChange={e => this.handleOptionChange(e)}
+                />
+                <p className="RadioName">
+                  2PT Conversion
+                </p>
+              </label>
+            </div>
+            <div className="ValueRadio">
+              <label>
+                <input
+                  type="radio"
+                  value="SAFETY"
+                  name="scoring"
+                  checked={this.state.score === "SAFETY"}
+                  onChange={e => this.handleOptionChange(e)}
+                />
+                <p className="RadioName">Safety</p>
+              </label>
+            </div>
           </div>
-          <div className="ValueRadio">
-            <label>
-              <input
-                type="radio"
-                value="OFF_TOUCHDOWN"
-                name="scoring"
-                checked={this.state.scor === "OFF_TOUCHDOWN"}
-                onChange={e => this.handleOptionChange(e)}
-              />
-              <p className="RadioName">
-                Offensive TD
-              </p>
-            </label>
-          </div>
-          <div className="ValueRadio">
-            <label>
-              <input
-                type="radio"
-                value="DEF_TOUCHDOWN"
-                name="scoring"
-                checked={this.state.scor === "DEF_TOUCHDOWN"}
-                onChange={e => this.handleOptionChange(e)}
-              />
-              <p className="RadioName">
-                Defensive TD
-              </p>
-            </label>
-          </div>
-          <div className="ValueRadio">
-            <label>
-              <input
-                type="radio"
-                value="ST_TOUCHDOWN"
-                name="scoring"
-                checked={this.state.scor === "ST_TOUCHDOWN"}
-                onChange={e => this.handleOptionChange(e)}
-              />
-              <p className="RadioName">
-                Sp. Teams TD
-              </p>
-            </label>
-          </div>
-          <div className="ValueRadio">
-            <label>
-              <input
-                type="radio"
-                value="FIELDGOAL"
-                name="scoring"
-                checked={this.state.scor === "FIELDGOAL"}
-                onChange={e => this.handleOptionChange(e)}
-              />
-              <p className="RadioName">
-                Field Goal Made
-              </p>
-            </label>
-          </div>
-          <div className="ValueRadio">
-            <label>
-              <input
-                type="radio"
-                value="EXTRA_POINT"
-                name="scoring"
-                name="scoring"
-                checked={this.state.scor === "EXTRA_POINT"}
-                onChange={e => this.handleOptionChange(e)}
-              />
-              <p className="RadioName">
-                Extra Point Made
-              </p>
-            </label>
-          </div>
-          <div className="ValueRadio">
-            <label>
-              <input
-                type="radio"
-                value="TWOPT_CONVERSION"
-                name="scoring"
-                checked={this.state.scor === "TWOPT_CONVERSION"}
-                onChange={e => this.handleOptionChange(e)}
-              />
-              <p className="RadioName">
-                2PT Conversion
-              </p>
-            </label>
-          </div>
-          <div className="ValueRadio">
-            <label>
-              <input
-                type="radio"
-                value="SAFETY"
-                name="scoring"
-                checked={this.state.scor === "SAFETY"}
-                onChange={e => this.handleOptionChange(e)}
-              />
-              <p className="RadioName">Safety</p>
-            </label>
-          </div>
-        </div>
+        </form>
       </div>
     );
   }
