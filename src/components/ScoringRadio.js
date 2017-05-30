@@ -23,8 +23,8 @@ export default class ScoringRadio extends Component {
                   type="radio"
                   value="NONE"
                   name="scoring"
-                  checked={this.state.score === "NONE"}
-                  onChange={e => this.handleOptionChange(e)}
+                  checked={this.props.currentState === "NONE"}
+                  onChange={event => this.props.handleOptionChange(event)}
                 />
                 <p className="RadioName">None</p>
               </label>
@@ -35,8 +35,8 @@ export default class ScoringRadio extends Component {
                   type="radio"
                   value="OFF_TOUCHDOWN"
                   name="scoring"
-                  checked={this.state.score === "OFF_TOUCHDOWN"}
-                  onChange={e => this.handleOptionChange(e)}
+                  checked={this.props.currentState === "OFF_TOUCHDOWN"}
+                  onChange={event => this.props.handleOptionChange(event)}
                 />
                 <p className="RadioName">
                   Offensive TD
@@ -49,8 +49,8 @@ export default class ScoringRadio extends Component {
                   type="radio"
                   value="DEF_TOUCHDOWN"
                   name="scoring"
-                  checked={this.state.score === "DEF_TOUCHDOWN"}
-                  onChange={e => this.handleOptionChange(e)}
+                  checked={this.props.currentState === "DEF_TOUCHDOWN"}
+                  onChange={event => this.props.handleOptionChange(event)}
                 />
                 <p className="RadioName">
                   Defensive TD
@@ -63,8 +63,8 @@ export default class ScoringRadio extends Component {
                   type="radio"
                   value="ST_TOUCHDOWN"
                   name="scoring"
-                  checked={this.state.score === "ST_TOUCHDOWN"}
-                  onChange={e => this.handleOptionChange(e)}
+                  checked={this.props.currentState === "ST_TOUCHDOWN"}
+                  onChange={event => this.props.handleOptionChange(event)}
                 />
                 <p className="RadioName">
                   Sp. Teams TD
@@ -77,8 +77,8 @@ export default class ScoringRadio extends Component {
                   type="radio"
                   value="FIELDGOAL"
                   name="scoring"
-                  checked={this.state.score === "FIELDGOAL"}
-                  onChange={e => this.handleOptionChange(e)}
+                  checked={this.props.currentState === "FIELDGOAL"}
+                  onChange={event => this.props.handleOptionChange(event)}
                 />
                 <p className="RadioName">
                   Field Goal Made
@@ -91,8 +91,8 @@ export default class ScoringRadio extends Component {
                   type="radio"
                   value="EXTRA_POINT"
                   name="scoring"
-                  checked={this.state.score === "EXTRA_POINT"}
-                  onChange={e => this.handleOptionChange(e)}
+                  checked={this.props.currentState === "EXTRA_POINT"}
+                  onChange={event => this.props.handleOptionChange(event)}
                 />
                 <p className="RadioName">
                   Extra Point Made
@@ -105,8 +105,8 @@ export default class ScoringRadio extends Component {
                   type="radio"
                   value="TWOPT_CONVERSION"
                   name="scoring"
-                  checked={this.state.score === "TWOPT_CONVERSION"}
-                  onChange={e => this.handleOptionChange(e)}
+                  checked={this.props.currentState === "TWOPT_CONVERSION"}
+                  onChange={event => this.props.handleOptionChange(event)}
                 />
                 <p className="RadioName">
                   2PT Conversion
@@ -119,8 +119,8 @@ export default class ScoringRadio extends Component {
                   type="radio"
                   value="SAFETY"
                   name="scoring"
-                  checked={this.state.score === "SAFETY"}
-                  onChange={e => this.handleOptionChange(e)}
+                  checked={this.props.currentState === "SAFETY"}
+                  onChange={event => this.props.handleOptionChange(event)}
                 />
                 <p className="RadioName">Safety</p>
               </label>

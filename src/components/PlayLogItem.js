@@ -1,4 +1,5 @@
-import React, { PropTypes } from "react";
+import React from "react";
+import PropTypes from "prop-types";
 import "./styles/PlayLogItem.css";
 
 function shortPhase(phase) {
@@ -19,7 +20,6 @@ function shortPhase(phase) {
       return "OT";
     default:
       return "NA";
-      break;
   }
 }
 

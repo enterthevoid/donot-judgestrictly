@@ -23,8 +23,8 @@ export default class TurnoverRadio extends Component {
                   type="radio"
                   value="NONE"
                   name="Turnover"
-                  checked={this.state.turnover === "NONE"}
-                  onChange={e => this.handleOptionChange(e)}
+                  checked={this.props.currentState === "NONE"}
+                  onChange={event => this.props.handleOptionChange(event)}
                 />
                 <p className="RadioName">
                   None
@@ -37,8 +37,8 @@ export default class TurnoverRadio extends Component {
                   type="radio"
                   value="FUMBLE"
                   name="Turnover"
-                  checked={this.state.turnover === "FUMBLE"}
-                  onChange={e => this.handleOptionChange(e)}
+                  checked={this.props.currentState === " fumble recovered by "}
+                  onChange={event => this.props.handleOptionChange(event)}
                 />
                 <p className="RadioName">
                   Fumble Lost
@@ -51,8 +51,8 @@ export default class TurnoverRadio extends Component {
                   type="radio"
                   value="INTERCEPTION"
                   name="Turnover"
-                  checked={this.state.turnover === "INTERCEPTION"}
-                  onChange={e => this.handleOptionChange(e)}
+                  checked={this.props.currentState === "INTERCEPTION"}
+                  onChange={event => this.props.handleOptionChange(event)}
                 />
                 <p className="RadioName">
                   Interception
@@ -65,8 +65,8 @@ export default class TurnoverRadio extends Component {
                   type="radio"
                   value="ON_DOWNS"
                   name="Turnover"
-                  checked={this.state.turnover === "ON_DOWNS"}
-                  onChange={e => this.handleOptionChange(e)}
+                  checked={this.props.currentState === "ON_DOWNS"}
+                  onChange={event => this.props.handleOptionChange(event)}
                 />
                 <p className="RadioName">
                   Turnover Downs

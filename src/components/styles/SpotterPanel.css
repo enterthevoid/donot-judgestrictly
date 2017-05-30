@@ -25,14 +25,14 @@
     display: flex;
     flex-direction: row;
 }
-.Input {
+.Description {
     height: 110px;
     width: 420px;
     margin-top:10px;
     margin-left: 25px;
     background-color: #F9F9F9;
 }
-.InputTitle{
+.DescriptionTitle{
     font-family: "Roboto";
     font-size: 12px;
     font-weight: 900;
@@ -41,9 +41,9 @@
     margin-top: 5px;
     margin-bottom: 0px;
 }
-textarea {
+.Input {
     font-family: "Roboto";
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 300;
     height: 90px;
     width: 415px;

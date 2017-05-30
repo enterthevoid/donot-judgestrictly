@@ -8,7 +8,7 @@ export default class PlayTypeRadio extends Component {
   }
   handleOptionChange(event) {
     this.setState({
-      selectedOption: event.target.value
+      play: event.target.value
     });
   }
   render() {
@@ -23,8 +23,8 @@ export default class PlayTypeRadio extends Component {
                   type="radio"
                   value="NONE"
                   name="PlayType"
-                  checked={this.state.selectedOption === "NONE"}
-                  onChange={e => this.handleOptionChange(e)}
+                  checked={this.props.currentState === "NONE"}
+                  onChange={e => this.props.handleOptionChange(e)}
                 />
                 <p className="RadioName">
                   None
@@ -37,8 +37,8 @@ export default class PlayTypeRadio extends Component {
                   type="radio"
                   value="PASS"
                   name="PlayType"
-                  checked={this.state.selectedOption === "PASS"}
-                  onChange={e => this.handleOptionChange(e)}
+                  checked={this.props.currentState === "PASS"}
+                  onChange={e => this.props.handleOptionChange(e)}
                 />
                 <p className="RadioName">
                   Pass Attempt
@@ -51,8 +51,8 @@ export default class PlayTypeRadio extends Component {
                   type="radio"
                   value="RUSH"
                   name="PlayType"
-                  checked={this.state.selectedOption === "RUSH"}
-                  onChange={e => this.handleOptionChange(e)}
+                  checked={this.props.currentState === "RUSH"}
+                  onChange={e => this.props.handleOptionChange(e)}
                 />
                 <p className="RadioName">
                   Rush Attempt
@@ -65,8 +65,8 @@ export default class PlayTypeRadio extends Component {
                   type="radio"
                   value="PENALTY"
                   name="PlayType"
-                  checked={this.state.selectedOption === "PENALTY"}
-                  onChange={e => this.handleOptionChange(e)}
+                  checked={this.props.currentState === "PENALTY"}
+                  onChange={e => this.props.handleOptionChange(e)}
                 />
                 <p className="RadioName">
                   Acc. Penalty
@@ -79,8 +79,8 @@ export default class PlayTypeRadio extends Component {
                   type="radio"
                   value="PUNT"
                   name="PlayType"
-                  checked={this.state.selectedOption === "PUNT"}
-                  onChange={e => this.handleOptionChange(e)}
+                  checked={this.props.currentState === "PUNT"}
+                  onChange={e => this.props.handleOptionChange(e)}
                 />
                 <p className="RadioName">
                   Punt
@@ -93,8 +93,8 @@ export default class PlayTypeRadio extends Component {
                   type="radio"
                   value="FIELDGOAL"
                   name="PlayType"
-                  checked={this.state.selectedOption === "FIELDGOAL"}
-                  onChange={e => this.handleOptionChange(e)}
+                  checked={this.props.currentState === "FIELDGOAL"}
+                  onChange={e => this.props.handleOptionChange(e)}
                 />
                 <p className="RadioName">
                   Field Goal
@@ -107,8 +107,8 @@ export default class PlayTypeRadio extends Component {
                   type="radio"
                   value="KICKOFF"
                   name="PlayType"
-                  checked={this.state.selectedOption === "KICKOFF"}
-                  onChange={e => this.handleOptionChange(e)}
+                  checked={this.props.currentState === "KICKOFF"}
+                  onChange={e => this.props.handleOptionChange(e)}
                 />
                 <p className="RadioName">
                   Kickoff
@@ -121,8 +121,8 @@ export default class PlayTypeRadio extends Component {
                   type="radio"
                   value="EXTRA_POINT"
                   name="PlayType"
-                  checked={this.state.selectedOption === "EXTRA_POINT"}
-                  onChange={e => this.handleOptionChange(e)}
+                  checked={this.props.currentState === "EXTRA_POINT"}
+                  onChange={e => this.props.handleOptionChange(e)}
                 />
                 <p className="RadioName">
                   Ext Point
@@ -135,8 +135,8 @@ export default class PlayTypeRadio extends Component {
                   type="radio"
                   value="SACK"
                   name="PlayType"
-                  checked={this.state.selectedOption === "SACK"}
-                  onChange={e => this.handleOptionChange(e)}
+                  checked={this.props.currentState === "SACK"}
+                  onChange={e => this.props.handleOptionChange(e)}
                 />
                 <p className="RadioName">
                   Sack
