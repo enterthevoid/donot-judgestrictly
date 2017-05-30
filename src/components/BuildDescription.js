@@ -4,7 +4,7 @@ function BuildDescription() {
   }
   var out;
   out = end_clock + ": ";
-  if ($("#fumble-lost").is(":checked")) {
+  if (("#fumble-lost") {
     out += start_poss + " fumble recovered by " + end_poss;
     if ($("#defensive-touchdown").is(":checked")) {
       out += " and returned for a TOUCHDOWN!";

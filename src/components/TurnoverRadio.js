@@ -37,7 +37,7 @@ export default class TurnoverRadio extends Component {
                   type="radio"
                   value="FUMBLE"
                   name="Turnover"
-                  checked={this.props.currentState === " fumble recovered by "}
+                  checked={this.props.currentState === "FUMBLE"}
                   onChange={event => this.props.handleOptionChange(event)}
                 />
                 <p className="RadioName">

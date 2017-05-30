@@ -22,9 +22,9 @@ export default class SpotterPanel extends Component {
     super(props);
 
     this.state = {
-      score: " ",
-      turnover: " ",
-      play: " "
+      score: "NONE",
+      turnover: "NONE",
+      play: "NONE"
     };
   }
   handleOptionChange(event) {
@@ -43,38 +43,42 @@ export default class SpotterPanel extends Component {
     }
   }
 
-  renderText(state) {
+  renderText() {
+    var state = this.state;
     var play;
     var score;
     var turnover;
+    var end_clock = " 7:32 ";
+    var start_poss = " NE ";
+    var end_poss = " NE ";
 
     switch (state.play) {
       case "NONE":
-        score = " ";
+        play = " ";
         break;
       case "PASS":
-        play = " pass for ";
+        play = " pass for";
         break;
       case "RUSH":
-        play = " rush for ";
+        play = " rush for";
         break;
       case "PENALTY":
-        play = "Penalty enforced for ";
+        play = " Penalty enforced for";
         break;
       case "PUNT":
-        play = " punt returned by ";
+        play = " punt returned by";
         break;
       case "FIELDGOAL":
         play = " field goal is GOOD!";
         break;
       case "KICKOFF":
-        play = " kickoff returned to the ";
+        play = " kickoff returned to the";
         break;
       case "EXTRA_POINT":
         play = " extra point is GOOD!";
         break;
       case "SACK":
-        play = " is sacked for a loss of ";
+        play = " is sacked for a loss of";
         break;
     }
     switch (state.score) {
@@ -104,10 +108,10 @@ export default class SpotterPanel extends Component {
     }
     switch (state.turnover) {
       case "NONE":
-        score = " ";
+        turnover = " ";
         break;
       case "FUMBLE":
-        turnover = " fumble recovered by ";
+        if ("FUMBLE") turnover = " fumble recovered by ";
         break;
       case "INTERCEPTION":
         turnover = " pass intercepted by ";
@@ -116,7 +120,7 @@ export default class SpotterPanel extends Component {
         turnover = " turned the ball over on downs.";
         break;
     }
-    return play + " " + turnover + " " + score;
+    return end_clock + ": " + play + turnover + score;
   }
 
   render() {
@@ -146,11 +150,7 @@ export default class SpotterPanel extends Component {
           <div className="Description">
             <p className="DescriptionTitle">DESCRIPTION :</p>
             <form>
-              <input
-                className="Input"
-                type="text"
-                value={this.renderText(this.state)}
-              />
+              <textarea rows={3} value={this.renderText()} className="Input" />
             </form>
           </div>
           <div className="FormButtons">

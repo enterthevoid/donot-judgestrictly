@@ -43,12 +43,13 @@
 }
 .Input {
     font-family: "Roboto";
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 300;
     height: 90px;
     width: 415px;
     background-color: #F9F9F9;
     border: 0px;
+    word-wrap: break-word;
 }
 .FormButtons{
     display: flex;
