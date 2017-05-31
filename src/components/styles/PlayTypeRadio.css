@@ -12,7 +12,6 @@
 .TitleRadio {
     font-family: "Roboto";
     font-size: 12px;
-    margin-left: 5px;
     margin-top: 6px;
     margin-bottom: 0px;
 }
@@ -39,7 +38,4 @@ label{
 }
 input {
     float: left;
-}
-p{
-    padding-left: 17px;
 }

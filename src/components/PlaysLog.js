@@ -2,18 +2,20 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import "./styles/PlaysLog.css";
 
+import plays from "./Plays.json";
+
 import Drawer from "material-ui/Drawer";
 import PlayLogItem from "./PlayLogItem";
 
 export default class SpotterScreen extends Component {
   constructor(props) {
     super(props);
-    this.state = { current: "zalu[a]" };
+    this.state = { current: { plays } };
   }
 
   handlePlayClick(play) {
     const { onChange } = this.props;
-    this.setState({ current: play.key });
+    this.setState({ current: plays.key });
     onChange(play);
   }
   render() {

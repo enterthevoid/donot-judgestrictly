@@ -8,7 +8,7 @@ export default class PlayTypeRadio extends Component {
   }
   handleOptionChange(event) {
     this.setState({
-      play: event.target.value
+      type: event.target.value
     });
   }
   render() {
@@ -91,9 +91,9 @@ export default class PlayTypeRadio extends Component {
               <label>
                 <input
                   type="radio"
-                  value="FIELDGOAL"
+                  value="TYPE_FIELDGOAL"
                   name="PlayType"
-                  checked={this.props.currentState === "FIELDGOAL"}
+                  checked={this.props.currentState === "TYPE_FIELDGOAL"}
                   onChange={e => this.props.handleOptionChange(e)}
                 />
                 <p className="RadioName">
@@ -119,9 +119,9 @@ export default class PlayTypeRadio extends Component {
               <label>
                 <input
                   type="radio"
-                  value="EXTRA_POINT"
+                  value="TYPE_EXTRA_POINT"
                   name="PlayType"
-                  checked={this.props.currentState === "EXTRA_POINT"}
+                  checked={this.props.currentState === "TYPE_EXTRA_POINT"}
                   onChange={e => this.props.handleOptionChange(e)}
                 />
                 <p className="RadioName">

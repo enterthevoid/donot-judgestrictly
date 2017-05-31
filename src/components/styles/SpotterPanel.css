@@ -45,11 +45,12 @@
     font-family: "Roboto";
     font-size: 15px;
     font-weight: 300;
-    height: 90px;
-    width: 415px;
+    height: 70px;
+    width: 400px;
     background-color: #F9F9F9;
     border: 0px;
     word-wrap: break-word;
+    padding: 10px;
 }
 .FormButtons{
     display: flex;

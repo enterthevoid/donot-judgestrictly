@@ -12,9 +12,9 @@
 .TitleRadio {
     font-family: "Roboto";
     font-size: 12px;
-    margin-left: 10px;
     margin-top: 6px;
     margin-bottom: 0px;
+    margin-left: 10px;
 }
 .ValueRadio {
     font-family: "Roboto";
@@ -38,7 +38,4 @@ label{
 }
 input {
     float: left;
-}
-p{
-    padding-left: 17px;
 }

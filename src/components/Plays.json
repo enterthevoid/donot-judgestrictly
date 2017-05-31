@@ -1,0 +1,84 @@
+[
+    {
+        "Plays": {
+            "-KlPh_ojCToJ6_XTER9E": {
+                "phase": "QUARTER 1",
+                "clock": "3:30",
+                "description": "",
+                "end": {
+                    "down": 1,
+                    "location": 9,
+                    "locationAlias": "NE",
+                    "timestamp": 1496170496,
+                    "yards": 10
+                },
+                "processed": false,
+                "scoreAway": 20,
+                "scoreHome": 28,
+                "scoring": "NONE",
+                "start": {
+                    "down": 3,
+                    "location": 35,
+                    "locationAlias": "NE",
+                    "timestamp": 1496170496,
+                    "yards": 23
+                },
+                "turnover": "UNDEFINED",
+                "type": "NONE",
+                "yardsGained": 0
+            },
+            "-KlPhgZA48cV5SuariKz": {
+                "phase": "QUARTER 2",
+                "clock": "3:24",
+                "description": "",
+                "end": {
+                    "down": 2,
+                    "location": 9,
+                    "locationAlias": "NE",
+                    "timestamp": 1496170547,
+                    "yards": 10
+                },
+                "processed": false,
+                "scoreAway": 20,
+                "scoreHome": 28,
+                "scoring": "NONE",
+                "start": {
+                    "down": 1,
+                    "location": 9,
+                    "locationAlias": "NE",
+                    "timestamp": 1496170547,
+                    "yards": 10
+                },
+                "turnover": "NONE",
+                "type": "NONE",
+                "yardsGained": 0
+            },
+            "-KlPhsH1LFjPV5QAeP-m": {
+                "phase": "QUARTER 3",
+                "clock": "3:17",
+                "description": "",
+                "end": {
+                    "down": 3,
+                    "location": 9,
+                    "locationAlias": "NE",
+                    "timestamp": 1496170596,
+                    "yards": 10
+                },
+                "processed": false,
+                "scoreAway": 20,
+                "scoreHome": 28,
+                "scoring": "NONE",
+                "start": {
+                    "down": 2,
+                    "location": 9,
+                    "locationAlias": "NE",
+                    "timestamp": 1496170596,
+                    "yards": 10
+                },
+                "turnover": "NONE",
+                "type": "NONE",
+                "yardsGained": 0
+            }
+        }
+    }
+]
