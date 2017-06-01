@@ -11,7 +11,7 @@ export default class PlaysLog extends Component {
     onChange(play);
   }
   render() {
-    const { plays, selected, onChange } = this.props;
+    const { plays, selected } = this.props;
     return (
       <div className="ContainerLog">
         <div>
@@ -49,8 +49,8 @@ export default class PlaysLog extends Component {
 
 PlaysLog.propTypes = {
   onChange: PropTypes.func,
-  plays: PropTypes.object,
-  selected: PropTypes.bool
+  plays: PropTypes.array,
+  selected: PropTypes.object
 };
 PlaysLog.defaultProps = {
   onChange: () => {},

@@ -15,66 +15,64 @@ export default class TurnoverRadio extends Component {
     return (
       <div className="Turnover">
         <p className="TitleRadio">TURNOVER :</p>
-        <form>
-          <div className="Radio">
-            <div className="ValueRadio">
-              <label>
-                <input
-                  type="radio"
-                  value="NONE"
-                  name="Turnover"
-                  checked={this.props.currentState === "NONE"}
-                  onChange={event => this.props.handleOptionChange(event)}
-                />
-                <p className="RadioName">
-                  None
-                </p>
-              </label>
-            </div>
-            <div className="ValueRadio">
-              <label>
-                <input
-                  type="radio"
-                  value="FUMBLE"
-                  name="Turnover"
-                  checked={this.props.currentState === "FUMBLE"}
-                  onChange={event => this.props.handleOptionChange(event)}
-                />
-                <p className="RadioName">
-                  Fumble Lost
-                </p>
-              </label>
-            </div>
-            <div className="ValueRadio">
-              <label>
-                <input
-                  type="radio"
-                  value="INTERCEPTION"
-                  name="Turnover"
-                  checked={this.props.currentState === "INTERCEPTION"}
-                  onChange={event => this.props.handleOptionChange(event)}
-                />
-                <p className="RadioName">
-                  Interception
-                </p>
-              </label>
-            </div>
-            <div className="ValueRadio">
-              <label>
-                <input
-                  type="radio"
-                  value="ON_DOWNS"
-                  name="Turnover"
-                  checked={this.props.currentState === "ON_DOWNS"}
-                  onChange={event => this.props.handleOptionChange(event)}
-                />
-                <p className="RadioName">
-                  Turnover Downs
-                </p>
-              </label>
-            </div>
+        <div className="Radio">
+          <div className="ValueRadio">
+            <label>
+              <input
+                type="radio"
+                value="NONE"
+                name="Turnover"
+                checked={this.props.currentState === "NONE"}
+                onChange={event => this.props.handleOptionChange(event)}
+              />
+              <p className="RadioName">
+                None
+              </p>
+            </label>
           </div>
-        </form>
+          <div className="ValueRadio">
+            <label>
+              <input
+                type="radio"
+                value="FUMBLE"
+                name="Turnover"
+                checked={this.props.currentState === "FUMBLE"}
+                onChange={event => this.props.handleOptionChange(event)}
+              />
+              <p className="RadioName">
+                Fumble Lost
+              </p>
+            </label>
+          </div>
+          <div className="ValueRadio">
+            <label>
+              <input
+                type="radio"
+                value="INTERCEPTION"
+                name="Turnover"
+                checked={this.props.currentState === "INTERCEPTION"}
+                onChange={event => this.props.handleOptionChange(event)}
+              />
+              <p className="RadioName">
+                Interception
+              </p>
+            </label>
+          </div>
+          <div className="ValueRadio">
+            <label>
+              <input
+                type="radio"
+                value="ON_DOWNS"
+                name="Turnover"
+                checked={this.props.currentState === "ON_DOWNS"}
+                onChange={event => this.props.handleOptionChange(event)}
+              />
+              <p className="RadioName">
+                Turnover Downs
+              </p>
+            </label>
+          </div>
+        </div>
       </div>
     );
   }

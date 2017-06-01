@@ -21,7 +21,6 @@ const style = {
 export default class SpotterPanel extends Component {
   constructor(props) {
     super(props);
-    const { scoring, turnover, type } = props.play;
 
     this.state = {
       ...this.fillPlay(props),
@@ -78,7 +77,7 @@ export default class SpotterPanel extends Component {
         type = " ";
         break;
       case "PASS":
-        if ((state.type = "PASS")) {
+        if (state.type === "PASS") {
           type =
             end_clock +
             end_poss +
@@ -179,6 +178,9 @@ export default class SpotterPanel extends Component {
           type = " . ";
         }
         break;
+      default:
+        type = "not defined";
+        break;
     }
     switch (state.score) {
       case "NONE":
@@ -204,6 +206,7 @@ export default class SpotterPanel extends Component {
         break;
       case "SAFETY":
         score = ", SAFETY!";
+        break;
       default:
         turnover = "not defined";
         break;
@@ -233,7 +236,6 @@ export default class SpotterPanel extends Component {
       case "ON_DOWNS":
         turnover = " turned the ball over on downs.";
         break;
-
       default:
         turnover = "not defined";
         break;
@@ -251,48 +253,46 @@ export default class SpotterPanel extends Component {
             <YardsGained />
             <PlayStarted />
           </div>
-          <form>
-            <div className="RadioBox">
-              <PlayTypeRadio
-                currentState={this.state.type}
-                handleOptionChange={event => this.handleOptionChange(event)}
+          <div className="RadioBox">
+            <PlayTypeRadio
+              currentState={this.state.type}
+              handleOptionChange={event => this.handleOptionChange(event)}
+            />
+            <ScoringRadio
+              currentState={this.state.score}
+              handleOptionChange={event => this.handleOptionChange(event)}
+            />
+            <TurnoverRadio
+              currentState={this.state.turnover}
+              handleOptionChange={event => this.handleOptionChange(event)}
+            />
+          </div>
+          <div className="Description">
+            <p className="DescriptionTitle">DESCRIPTION :</p>
+            <form>
+              <textarea
+                rows={3}
+                value={this.renderText()}
+                readOnly
+                className="Input"
               />
-              <ScoringRadio
-                currentState={this.state.score}
-                handleOptionChange={event => this.handleOptionChange(event)}
-              />
-              <TurnoverRadio
-                currentState={this.state.turnover}
-                handleOptionChange={event => this.handleOptionChange(event)}
-              />
-            </div>
-            <div className="Description">
-              <p className="DescriptionTitle">DESCRIPTION :</p>
-              <form>
-                <textarea
-                  rows={3}
-                  value={this.renderText()}
-                  className="Input"
-                />
-              </form>
-            </div>
-            <div className="FormButtons">
-              <RaisedButton
-                label="Reset"
-                style={style}
-                type="reset"
-                onClick={() => {
-                  this.onReset(this.props.play);
-                }}
-              />
-              <RaisedButton
-                type="submit"
-                label="Save Play"
-                style={{ marginLeft: 125, height: 52, width: 145 }}
-                backgroundColor="#FFCF00"
-              />
-            </div>
-          </form>
+            </form>
+          </div>
+          <div className="FormButtons">
+            <RaisedButton
+              label="Reset"
+              style={style}
+              onClick={() => {
+                this.onReset(this.props.play);
+              }}
+            />
+            <RaisedButton
+              type="submit"
+              label="Save Play"
+              style={{ marginLeft: 125, height: 52, width: 145 }}
+              backgroundColor="#FFCF00"
+            />
+          </div>
         </Paper>
       </div>
     );

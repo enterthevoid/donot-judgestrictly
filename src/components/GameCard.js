@@ -40,7 +40,6 @@ class GameCard extends Component {
           </div>
           <Link className="Link" to="/spoterscreen">
             <RaisedButton
-              href="#"
               label="MONITOR"
               backgroundColor="#FFCF00"
               fullWidth={true}
