@@ -6,14 +6,14 @@ import PlayTypeRadio from "../components/PlayTypeRadio";
 import ScoringRadio from "../components/ScoringRadio";
 import TurnoverRadio from "../components/TurnoverRadio";
 import "./styles/SpotterPanel.css";
+import plays from "./plays.json";
 
 import Paper from "material-ui/Paper";
 import RaisedButton from "material-ui/RaisedButton";
-import Plays from "./Plays.json";
 
 const style = {
   height: 52,
-  width: 100,
+  width: 150,
   backgroundColor: "#F9F9F9",
   marginLeft: 25
 };
@@ -21,14 +21,31 @@ const style = {
 export default class SpotterPanel extends Component {
   constructor(props) {
     super(props);
+    const { scoring, turnover, type } = props.play;
 
     this.state = {
-      score: "NONE",
-      turnover: "NONE",
-      type: "NONE",
-      play: Plays.KlPh_ojCToJ6_XTER9E
+      ...this.fillPlay(props),
+      play: plays.key
     };
   }
+
+  componentWillReceiveProps(nextProps) {
+    this.setState(this.fillPlay(nextProps));
+  }
+
+  fillPlay(props) {
+    const { scoring, turnover, type } = props.play;
+    return {
+      score: scoring,
+      turnover: turnover,
+      type: type
+    };
+  }
+
+  onReset() {
+    this.setState(this.fillPlay(this.props));
+  }
+
   handleOptionChange(event) {
     switch (event.target.name) {
       case "PlayType":
@@ -50,7 +67,7 @@ export default class SpotterPanel extends Component {
     var type;
     var score;
     var turnover;
-    var end_clock = " 7:32 ";
+    var end_clock = " 7:32 : ";
     var start_poss = " NE ";
     var end_poss = " NA ";
     var yardsGained = 3;
@@ -63,17 +80,18 @@ export default class SpotterPanel extends Component {
       case "PASS":
         if ((state.type = "PASS")) {
           type =
+            end_clock +
             end_poss +
             " pass for " +
             yardsGained +
             " yard" +
             (yardsGained === 1 ? "" : "s");
         } else if (state.score === "OFF_TOUCHDOWN") {
-          type = ", TOUCHDOWN!";
+          type = end_clock + ", TOUCHDOWN!";
         } else if (state.score === "TWOPT_CONVERSION") {
-          type = ", CONVERSION SUCCESSFUL!";
+          type = end_clock + ", CONVERSION SUCCESSFUL!";
         } else if (state.score === "SAFETY") {
-          type = ", SAFETY!";
+          type = end_clock + ", SAFETY!";
         } else {
           type = " . ";
         }
@@ -81,23 +99,25 @@ export default class SpotterPanel extends Component {
       case "RUSH":
         if (state.type === "RUSH") {
           type =
+            end_clock +
             end_poss +
             " rush for " +
             yardsGained +
             " yard" +
             (yardsGained === 1 ? "" : "s");
         } else if (state.score === "OFF_TOUCHDOWN") {
-          type = ", TOUCHDOWN!";
+          type = end_clock + ", TOUCHDOWN!";
         } else if (state.score === "TWOPT_CONVERSION") {
-          type = ", CONVERSION SUCCESSFUL!";
+          type = end_clock + ", CONVERSION SUCCESSFUL!";
         } else if (state.score === "SAFETY") {
-          type = ", SAFETY!";
+          type = end_clock + ", SAFETY!";
         } else {
           type = " . ";
         }
         break;
       case "PENALTY":
         type =
+          end_clock +
           " Penalty enforced for " +
           yardsGained +
           " yard" +
@@ -106,38 +126,55 @@ export default class SpotterPanel extends Component {
       case "PUNT":
         if (state.score === "ST_TOUCHDOWN") {
           type =
-            start_poss + " punt returned by " + end_poss + " for a TOUCHDOWN!";
+            end_clock +
+            start_poss +
+            " punt returned by " +
+            end_poss +
+            " for a TOUCHDOWN!";
         } else {
-          type = start_poss + " punt returned to the " + end_location + ".";
+          type =
+            end_clock +
+            start_poss +
+            " punt returned to the " +
+            end_location +
+            ".";
         }
         break;
       case "TYPE_FIELDGOAL":
         if (state.score === "FIELDGOAL") {
-          type = start_poss + " field goal is GOOD!";
+          type = end_clock + start_poss + " field goal is GOOD!";
         } else {
-          type = start_poss + " field goal attempt FAILED!";
+          type = end_clock + start_poss + " field goal attempt FAILED!";
         }
         break;
       case "KICKOFF":
         if (state.score === "ST_TOUCHDOWN") {
-          type = start_poss + " kickoff returned for a TOUCHDOWN!";
+          type = end_clock + start_poss + " kickoff returned for a TOUCHDOWN!";
         } else {
-          type = start_poss + " kickoff returned to the " + end_location + ".";
+          type =
+            end_clock +
+            start_poss +
+            " kickoff returned to the " +
+            end_location +
+            ".";
         }
         break;
       case "TYPE_EXTRA_POINT":
         if (state.score === "EXTRA_POINT") {
-          type = start_poss + " extra point is GOOD!";
+          type = end_clock + start_poss + " extra point is GOOD!";
         } else {
-          type = start_poss + " extra point attempt FAILED!";
+          type = end_clock + start_poss + " extra point attempt FAILED!";
         }
         break;
       case "SACK":
         if (state.type === "SACK") {
           type =
-            start_poss + " is sacked for a loss of " + Math.abs(yardsGained);
+            end_clock +
+            start_poss +
+            " is sacked for a loss of " +
+            Math.abs(yardsGained);
         } else if (state.score === "SAFETY") {
-          type = " for a SAFETY!";
+          type = end_clock + " for a SAFETY!";
         } else {
           type = " . ";
         }
@@ -201,7 +238,7 @@ export default class SpotterPanel extends Component {
         turnover = "not defined";
         break;
     }
-    return end_clock + ":" + type + turnover + score;
+    return type + turnover + score;
   }
 
   render() {
@@ -240,12 +277,18 @@ export default class SpotterPanel extends Component {
               </form>
             </div>
             <div className="FormButtons">
-              <RaisedButton label="Reset" style={style} type="reset" />
-              <RaisedButton label="Skip" style={style} />
+              <RaisedButton
+                label="Reset"
+                style={style}
+                type="reset"
+                onClick={() => {
+                  this.onReset(this.props.play);
+                }}
+              />
               <RaisedButton
                 type="submit"
                 label="Save Play"
-                style={{ marginLeft: 49, height: 52, width: 145 }}
+                style={{ marginLeft: 125, height: 52, width: 145 }}
                 backgroundColor="#FFCF00"
               />
             </div>

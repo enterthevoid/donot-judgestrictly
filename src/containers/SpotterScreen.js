@@ -3,22 +3,10 @@ import "./SpotterScreen.css";
 import PlaysLog from "../components/PlaysLog";
 import SpotterPanel from "../components/SpotterPanel";
 import SpotterHead from "../components/SpotterHead";
-
-import plays from "../components/Plays.json";
+import gPlays from "../components/plays.json";
 
 import Toggle from "material-ui/Toggle";
 import Paper from "material-ui/Paper";
-
-// const g_Plays = [
-//   { key: "zalu[a]", phase: "QUARTER 1", clock: "10:55", processed: false },
-//   { key: "zalu[a]2", phase: "QUARTER 2", clock: "11:55", processed: false },
-//   { key: "zalu[a]3", phase: "QUARTER 3", clock: "12:55", processed: true },
-//   { key: "zalu[a]4", phase: "QUARTER 4", clock: "13:55", processed: true },
-//   { key: "zalu[a]5", phase: "PREGAME", clock: "14:55", processed: true },
-//   { key: "zalu[a]6", phase: "HALFTIME", clock: "15:55", processed: true },
-//   { key: "zalu[a]7", phase: "OVERTIME", clock: "16:55", processed: true },
-//   { key: "zalu[a]8", phase: "OVE", clock: "16:55", processed: true }
-// ];
 
 const styles = {
   thumbOff: {
@@ -39,6 +27,14 @@ const styles = {
 };
 
 export default class SpotterScreen extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { selectedPlay: gPlays[0] };
+  }
+
+  handlePlayChange(play) {
+    this.setState({ selectedPlay: play });
+  }
   render() {
     return (
       <div className="ContainerSpotter">
@@ -66,14 +62,15 @@ export default class SpotterScreen extends Component {
           </div>
           <div>
             <PlaysLog
-              onChange={plays => {
-                this.handlePlayChange(plays);
+              onChange={play => {
+                this.handlePlayChange(play);
               }}
-              plays={plays}
+              plays={gPlays}
+              selected={this.state.selectedPlay}
             />
           </div>
           <div>
-            <SpotterPanel />
+            <SpotterPanel play={this.state.selectedPlay} />
           </div>
         </div>
       </div>

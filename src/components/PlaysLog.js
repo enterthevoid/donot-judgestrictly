@@ -2,24 +2,16 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import "./styles/PlaysLog.css";
 
-import plays from "./Plays.json";
-
 import Drawer from "material-ui/Drawer";
 import PlayLogItem from "./PlayLogItem";
 
-export default class SpotterScreen extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { current: { plays } };
-  }
-
+export default class PlaysLog extends Component {
   handlePlayClick(play) {
     const { onChange } = this.props;
-    this.setState({ current: plays.key });
     onChange(play);
   }
   render() {
-    const { plays, processed, selected, onChange, phase, clock } = this.props;
+    const { plays, selected, onChange } = this.props;
     return (
       <div className="ContainerLog">
         <div>
@@ -40,7 +32,7 @@ export default class SpotterScreen extends Component {
                   <PlayLogItem
                     key={play.key}
                     onClick={() => this.handlePlayClick(play)}
-                    selected={this.state.current === play.key}
+                    selected={selected.key === play.key}
                     processed={play.processed}
                     phase={play.phase}
                     clock={play.clock}
@@ -55,17 +47,12 @@ export default class SpotterScreen extends Component {
   }
 }
 
-PlayLogItem.propTypes = {
+PlaysLog.propTypes = {
   onChange: PropTypes.func,
-  processed: PropTypes.bool,
-  selected: PropTypes.bool,
-  phase: PropTypes.string,
-  clock: PropTypes.string
+  plays: PropTypes.object,
+  selected: PropTypes.bool
 };
-PlayLogItem.defaultProps = {
+PlaysLog.defaultProps = {
   onChange: () => {},
-  processed: false,
-  selected: true,
-  phase: "Quarter 0 ",
-  clock: "00:00"
+  selected: null
 };
