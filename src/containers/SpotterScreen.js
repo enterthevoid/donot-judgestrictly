@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import "./SpotterScreen.css";
-import PlaysLog from "../components/PlaysLog";
-import SpotterPanel from "../components/SpotterPanel";
+import PlaysLog from "../components/playLog/PlaysLog";
+import Form from "../components/form/";
 import SpotterHead from "../components/SpotterHead";
-import gPlays from "../components/plays.json";
+import gPlays from "../assets/plays.json";
 
 import Toggle from "material-ui/Toggle";
 import Paper from "material-ui/Paper";
@@ -29,7 +29,9 @@ const styles = {
 export default class SpotterScreen extends Component {
   constructor(props) {
     super(props);
-    this.state = { selectedPlay: gPlays[0] };
+    this.state = {
+      selectedPlay: gPlays[0]
+    };
   }
 
   handlePlayChange(play) {
@@ -70,7 +72,7 @@ export default class SpotterScreen extends Component {
             />
           </div>
           <div>
-            <SpotterPanel play={this.state.selectedPlay} />
+            <Form play={this.state.selectedPlay} />
           </div>
         </div>
       </div>

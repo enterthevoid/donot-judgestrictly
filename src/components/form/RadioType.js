@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import "./styles/PlayTypeRadio.css";
+import "../styles/RadioType.css";
 
-export default class PlayTypeRadio extends Component {
+export default class RadioType extends Component {
   constructor(props) {
     super(props);
     this.state = {};

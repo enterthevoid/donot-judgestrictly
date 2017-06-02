@@ -5,6 +5,7 @@
         "clock": "3:30",
         "description": "",
         "end": {
+            "possession": "ATL",
             "down": 1,
             "location": 9,
             "locationAlias": "NE",
@@ -16,6 +17,7 @@
         "scoreHome": 28,
         "scoring": "NONE",
         "start": {
+            "possession": "ATL",
             "down": 3,
             "location": 35,
             "locationAlias": "NE",
@@ -24,7 +26,7 @@
         },
         "turnover": "UNDEFINED",
         "type": "KICKOFF",
-        "yardsGained": 0
+        "yardsGained": 3
     },
     {
         "key": "key2",
@@ -32,6 +34,7 @@
         "clock": "3:24",
         "description": "",
         "end": {
+            "possession": "ATL",
             "down": 2,
             "location": 9,
             "locationAlias": "NE",
@@ -43,15 +46,16 @@
         "scoreHome": 28,
         "scoring": "NONE",
         "start": {
+            "possession": "ATL",
             "down": 1,
             "location": 9,
             "locationAlias": "NE",
             "timestamp": 1496170547,
             "yards": 10
         },
-        "turnover": "PUNT",
+        "turnover": "FUMBLE",
         "type": "NONE",
-        "yardsGained": 0
+        "yardsGained": 10
     },
     {
         "key": "key3",
@@ -59,6 +63,7 @@
         "clock": "3:17",
         "description": "",
         "end": {
+            "possession": "ATL",
             "down": 3,
             "location": 9,
             "locationAlias": "NE",
@@ -70,6 +75,7 @@
         "scoreHome": 28,
         "scoring": "NONE",
         "start": {
+            "possession": "ATL",
             "down": 2,
             "location": 9,
             "locationAlias": "NE",
@@ -78,6 +84,6 @@
         },
         "turnover": "NONE",
         "type": "NONE",
-        "yardsGained": 0
+        "yardsGained": 8
     }
 ]

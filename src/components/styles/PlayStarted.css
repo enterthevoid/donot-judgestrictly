@@ -6,7 +6,7 @@
     font-family: "Roboto";
     font-size: 12px;
     font-weight: 600;
-    margin: 6px 0 7px 10px;
+    margin: 6px 0 2px 10px;
 }
 .PlayStarted{
     height:55px;
@@ -20,5 +20,7 @@
     font-family: "Roboto";
     font-size: 18px;
     font-weight: 500;
-    margin: 0px 0 10px 10px;
+    margin-left:  10px;
+    width: 110px;
+    border: none;
 }

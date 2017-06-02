@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import Situations from "../components/Situations";
-import YardsGained from "../components/YardsGained";
-import PlayStarted from "../components/PlayStarted";
-import PlayTypeRadio from "../components/PlayTypeRadio";
-import ScoringRadio from "../components/ScoringRadio";
-import TurnoverRadio from "../components/TurnoverRadio";
-import "./styles/SpotterPanel.css";
-import plays from "./plays.json";
+import Situations from "./Situations";
+import YardsGained from "./YardsGained";
+import PlayStarted from "./PlayStarted";
+import RadioType from "./RadioType";
+import RadioScoring from "./RadioScoring";
+import RadioTurnover from "./RadioTurnover";
+import "../styles/Form.css";
+import plays from "../../assets/plays.json";
 
 import Paper from "material-ui/Paper";
 import RaisedButton from "material-ui/RaisedButton";
@@ -18,7 +18,7 @@ const style = {
   marginLeft: 25
 };
 
-export default class SpotterPanel extends Component {
+export default class Form extends Component {
   constructor(props) {
     super(props);
 
@@ -248,21 +248,26 @@ export default class SpotterPanel extends Component {
       <div className="SpotterContainer">
         <Paper className="SpotterRoot">
           <div className="TopLine" />
-          <Situations />
+          <Situations
+            end={this.props.play.end}
+            start={this.props.play.start}
+            phase={this.props.play.phase}
+            clock={this.props.play.clock}
+          />
           <div className="YardsnTime">
-            <YardsGained />
-            <PlayStarted />
+            <YardsGained yardsGained={this.props.play.yardsGained} />
+            <PlayStarted timestamp={this.props.play.start.timestamp} />
           </div>
           <div className="RadioBox">
-            <PlayTypeRadio
+            <RadioType
               currentState={this.state.type}
               handleOptionChange={event => this.handleOptionChange(event)}
             />
-            <ScoringRadio
+            <RadioScoring
               currentState={this.state.score}
               handleOptionChange={event => this.handleOptionChange(event)}
             />
-            <TurnoverRadio
+            <RadioTurnover
               currentState={this.state.turnover}
               handleOptionChange={event => this.handleOptionChange(event)}
             />

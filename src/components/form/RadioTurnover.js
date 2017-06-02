@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./styles/TurnoverRadio.css";
+import "../styles/RadioTurnover.css";
 
 export default class TurnoverRadio extends Component {
   constructor(props) {
@@ -24,6 +24,7 @@ export default class TurnoverRadio extends Component {
                 name="Turnover"
                 checked={this.props.currentState === "NONE"}
                 onChange={event => this.props.handleOptionChange(event)}
+                disabled={this.props.currentState === "UNDEFINED"}
               />
               <p className="RadioName">
                 None

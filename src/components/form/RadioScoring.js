@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./styles/ScoringRadio.css";
+import "../styles/RadioScoring.css";
 
 export default class ScoringRadio extends Component {
   constructor(props) {

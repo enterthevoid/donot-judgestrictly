@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import TextField from "material-ui/TextField";
 import RaisedButton from "material-ui/RaisedButton";
-import Logo from "../Logo.png";
+import Logo from "../assets/Logo.png";
 import { Link } from "react-router-dom";
 
 import "./LoginScreen.css";
